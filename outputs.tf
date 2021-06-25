@@ -8,3 +8,4 @@ output "mysql_database" {
   value       = azurerm_mysql_database.database
 }
 
+

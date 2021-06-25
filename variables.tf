@@ -49,7 +49,7 @@ DESCRIPTION
   default     = "B_Gen5_2"
 }
 
-variable "storage_gb" {
+variable "storage_mb" {
   description = "The initial size of the database in MB, the defailt will be 5GB"
   type        = number
   default     = 5102

@@ -55,7 +55,7 @@ resource "azurerm_mysql_server" "database" {
 # Create the mysql database
 ##################################
 
-resource "azurerm_mysql_database" "databse" {
+resource "azurerm_mysql_database" "database" {
   name                = var.database_name
   resource_group_name = azurerm_resource_group.database.name
   server_name         = azurerm_mysql_server.database.name
