@@ -55,8 +55,8 @@ variable "storage_gb" {
   default     = 5102
 }
 
-variable "version" {
-  desription = "The version of the MySQL database i.e. 5.7 or 8.0"
+variable "mysql_version" {
+  description = "The version of the MySQL database i.e. 5.7 or 8.0"
   type       = string
   default    = "5.7"
 }

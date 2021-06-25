@@ -33,7 +33,7 @@ resource "azurerm_mysql_server" "database" {
 
   sku_name   = var.sku_name
   storage_mb = var.storage_mb
-  version    = var.version
+  version    = var.mysql_version
 
   auto_grow_enabled                 = true
   backup_retention_days             = var.backup_retention_days
@@ -81,4 +81,11 @@ resource "azurerm_mysql_firewall_rule" "database" {
   server_name         = azurerm_mysql_server.database.name
   start_ip_address    = "0.0.0.0"
   end_ip_address      = "0.0.0.0"
+
+  tags = merge(
+    var.common_tags,
+    tomap(
+      {"Component" = "Database"}
+    )
+  )
 }
