@@ -18,7 +18,7 @@ variable "mysql_server_name" {
 variable "create_mode" {
   description = "Specify whether this database is being created or used for a replica database"
   type        = string
-  default     = "Create"
+  default     = "Default"
 }
 
 variable "creation_source_server_id" {
@@ -84,6 +84,12 @@ variable "geo_redundant_backup_enabled" {
 DESCRIPTION
   type        = bool
   default     = false
+}
+
+variable "infrastructure_encryption_enabled" {
+  description = "Setting to determine if storage is encrypted at rest"
+  type    = bool
+  default = false
 }
 
 variable "database_name" {

@@ -5,7 +5,6 @@ This is a Terraform module to create an Azure MySql server and database.  The mo
 The following options are enforced by this module and not configurable.
 
 - The database will not be publicly assessible
-- The database storage will be encryoted
 - Connections to the database will only be allowed using TLS 1.2
 
 ## Objectives
