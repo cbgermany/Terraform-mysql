@@ -64,7 +64,7 @@ In the example above the subnets will be called Sysman, FrontEnd and BackEnd, th
 
 * **storage_gb**: The initial size of the database specified in MB, the default is 5GB.
 
-* **version**: The version of the MySql database, defaults to 5.7.  Set to either 5.7 or 8.0
+* **mysql_version**: The version of the MySql database, defaults to 5.7.  Set to either 5.7 or 8.0
 
 * **auto_grow_enabled**: Defaults to false, set to tru if you want the database to grow automatically
 
