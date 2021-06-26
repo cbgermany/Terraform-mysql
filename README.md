@@ -68,7 +68,7 @@ The following outputs are generated when terraform is run.
 
 * **mysql_server**: A Map of the MySql server 
 
-* **mysql_database: A Map of the MySql database 
+* **mysql_database**: A Map of the MySql database 
 
 ## Author
 
