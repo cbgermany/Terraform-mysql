@@ -22,9 +22,23 @@ The module will create the initial resource group and networking for the followi
 module "mysql" {
     source   = "../modules/Terraform-mysql"
 
-    mysql_server_name = "my-vnet-with-az"
+    mysql_server_name = "database_server"
     location          = "UK south"
-    resource_group    = "vnet_rsg"
+    resource_group    = "database_rsg"
+
+    database_name     = 'database_name"
+
+    administrator_login          = "useradmin"
+    administrator_login_password = "password"
+
+    sku_name      = "GP_Gen5_2"
+    storage_mb    = 5120
+    mysql_version = "5.7"
+
+    auto_grow_enabled                 = true
+    backup_retention_days             = 7
+    geo_redundant_backup_enabled      = false
+    infrastructure_encryption_enabled = true
 
 }
 ```
