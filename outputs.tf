@@ -8,4 +8,14 @@ output "mysql_database" {
   value       = azurerm_mysql_database.database
 }
 
+output "mysql_server_name" {
+  description = "The name of the mysql server"
+  value       = azurerm_mysql_server.database.name
+}
+
+output "mysql_database_name" {
+  description = "A name of the mysql database"
+  value       = azurerm_mysql_database.database.name
+}
+
 

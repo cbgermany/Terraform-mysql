@@ -40,6 +40,9 @@ module "mysql" {
     geo_redundant_backup_enabled      = false
     infrastructure_encryption_enabled = true
 
+    ssl_enforcement_enabled = false
+    subnet_id = "..subnet_id.."
+    
 }
 ```
 In the example above the subnets will be called Sysman, FrontEnd and BackEnd, the GatewaySubnet will be used for the VPN gateway. 
@@ -76,6 +79,10 @@ In the example above the subnets will be called Sysman, FrontEnd and BackEnd, th
 
 * **common_tags**: The common tags applied to resources
 
+* **ssl_enforcement_enabled**: Boolean to indicate whether ssl is enabled for connections
+
+* **subnet_id**: The subnet ID of the subnets that will connect to the database
+
 ## Outputs
 
 The following outputs are generated when terraform is run.
@@ -83,6 +90,10 @@ The following outputs are generated when terraform is run.
 * **mysql_server**: A Map of the MySql server 
 
 * **mysql_database**: A Map of the MySql database 
+
+* **mysql_server_name**: The Name of the MySql server
+
+* **mysql_database_name**: The Name of the MySql database name
 
 ## Author
 

@@ -88,8 +88,8 @@ DESCRIPTION
 
 variable "infrastructure_encryption_enabled" {
   description = "Setting to determine if storage is encrypted at rest"
-  type    = bool
-  default = false
+  type        = bool
+  default     = false
 }
 
 variable "database_name" {
@@ -102,4 +102,13 @@ variable "common_tags" {
   type        = map(string)
 }
 
+variable "ssl_enforcement_enabled" {
+  description = "Boolean to indicate whether SSL access to the databade should be enabled"
+  type        = bool
+  default     = false
+}
 
+variable "subnet_id" {
+  description = "The ID of the subnet that will connect to the MySql database"
+  type        = string
+}
