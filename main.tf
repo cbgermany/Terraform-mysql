@@ -67,7 +67,7 @@ resource "azurerm_mysql_database" "database" {
 ##################################
 
 resource "azurerm_mysql_virtual_network_rule" "database" {
-  name                = "fromntend-mysql-vnet-rule"
+  name                = "frontend-mysql-vnet-rule"
   resource_group_name = azurerm_resource_group.database.name
   server_name         = azurerm_mysql_server.database.name
   subnet_id           = var.subnet_id
